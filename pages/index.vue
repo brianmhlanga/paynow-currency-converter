@@ -1,9 +1,8 @@
-
-import Section_one from '~/components/section_one.vue';
 <template>
     <NuxtLayout name="default">
       <hero />
-      <Section_one />
+      <Calculator />
+      <Footer />
     </NuxtLayout>
   </template>
   

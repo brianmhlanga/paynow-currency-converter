@@ -1,20 +1,19 @@
 <template>
 <div class="mainnav">
-    <Deal />
     <div class="bg-custom py-3 px-6 shadow-2 flex align-items-center topmenus justify-content-between relative lg:static" style="min-height: 84px;">
-            <MegaMenu :model="items" class="bg-custom p-3 surface-0 col-10">
+            <MegaMenu :model="items"  class="bg-custom p-3 surface-0 col-10">
                 <template #start>
-                <NuxtImg src="/images/logo.svg" alt="Image" height="40" class="toplogo" />
+                <span> <NuxtImg src="https://www.paynow.co.zw/blog/wp-content/themes/paynowblog/assets/img/logo-default.svg" alt="Image" height="40" class="toplogo" /></span><span class="logo-text"> | Currency Converter</span>
                 </template>
-                <template #item="{ item }">
+                <!-- <template #item="{ item }">
                     <a v-if="item.root" v-ripple :href="`${item.link}`" class="flex align-items-center cursor-pointer px-3 py-2 overflow-hidden relative font-semibold text-lg menu-items" style="border-radius: 2rem">
                         <span class="ml-2 menutext">{{ item.label }}</span>
                     </a>
-                </template>
-                <template #end>
+                </template> -->
+                <!-- <template #end>
                     <Button  class="first mr-2" label="Login" />
                     <Button class="second" label="Register" />
-                </template>
+                </template> -->
             </MegaMenu>
     </div>
 </div>
@@ -22,23 +21,31 @@
 <script lang="ts" setup>
 const items = ref([
     {
-        label: 'Home',
-        link: '/',
+        label: 'Buy Airtime',
+        root: true,
+        command:() => {
+          navigateTo('https://www.topup.co.zw/airtime',{external: true})
+        }
+    },
+    {
+        label: 'Pay Broadband',
+        command:() => {
+          navigateTo('https://www.topup.co.zw/broadband',{external: true})
+        },
         root: true
     },
     {
-        label: 'Features',
-        link: '/#features',
-        root: true
+        label: 'Pay Bills',
+        command:() => {
+          navigateTo('https://www.topup.co.zw/broadband',{external: true})
+        },
+        root: false
     },
     {
-        label: 'Pricing',
-        link: '/#pricing',
-        root: true
-    },
-    {
-        label: 'Contact Us',
-        link: '#',
+        label: 'Pay Insurance',
+        command:() => {
+          navigateTo('https://www.topup.co.zw/insurance',{external: true})
+        },
         root: true
     }
 ]);
@@ -47,8 +54,19 @@ const items = ref([
 .bg-custom {
     background-color: #ffffff !important;
 }
+span.logo-text {
+    text-transform: uppercase;
+    vertical-align: top;
+    color: black;
+    font-size: 15px;
+    font-weight: 800;
+    font-family: Nunito, sans-serif;
+}
 img.toplogo {
-    height: 50px !important;
+    height: 25px !important;
+}
+.top-small {
+    font-size: 18px !important;
 }
 button.p-button.p-component.second {
     height: 40px;
@@ -80,6 +98,14 @@ button.p-button.p-component.first {
     margin-left: auto;
     align-self: center;
     margin-top: 6px !important;
+}
+.p-avatar.p-avatar-circle {
+    border-radius: 50% !important;
+    color: white;
+}
+.p-avatar {
+    background-color: #185ff9 !important;
+    border-radius: 6px;
 }
 .mainnav {
     position: fixed;
