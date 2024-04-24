@@ -1,20 +1,17 @@
 <template>
 <div class="mainnav">
     <div class="bg-custom py-3 px-6 shadow-2 flex align-items-center topmenus justify-content-between relative lg:static" style="min-height: 84px;">
-            <MegaMenu :model="items"  class="bg-custom p-3 surface-0 col-10">
-                <template #start>
+        
+        <Menubar :model="items" class="bg-custom p-3 surface-0 col-10">
+            <template #start>
                 <span> <NuxtImg src="https://www.paynow.co.zw/blog/wp-content/themes/paynowblog/assets/img/logo-default.svg" alt="Image" height="40" class="toplogo" /></span><span class="logo-text"> | Currency Converter</span>
-                </template>
-                <!-- <template #item="{ item }">
-                    <a v-if="item.root" v-ripple :href="`${item.link}`" class="flex align-items-center cursor-pointer px-3 py-2 overflow-hidden relative font-semibold text-lg menu-items" style="border-radius: 2rem">
-                        <span class="ml-2 menutext">{{ item.label }}</span>
-                    </a>
-                </template> -->
-                <!-- <template #end>
-                    <Button  class="first mr-2" label="Login" />
-                    <Button class="second" label="Register" />
-                </template> -->
-            </MegaMenu>
+            </template>
+            <template #item="{ item, root }">
+                <a v-ripple class="flex align-items-center">
+                    <span class="ml-2 menutext">{{ item.label }}</span>
+                </a>
+            </template>
+        </Menubar>
     </div>
 </div>
 </template>
@@ -53,6 +50,15 @@ const items = ref([
 <style>
 .bg-custom {
     background-color: #ffffff !important;
+    align-items: center !important;
+    margin: auto;
+}
+.p-menubar {
+    padding: 0.5rem 0.5rem;
+    background: #ffffff;
+    color: #334155;
+    border: none !important;
+    border-radius: 6px;
 }
 span.logo-text {
     text-transform: uppercase;
@@ -61,6 +67,13 @@ span.logo-text {
     font-size: 15px;
     font-weight: 800;
     font-family: Nunito, sans-serif;
+}
+.p-menubar-root-list {
+    margin: auto !important;
+}
+.p-menubar .p-menuitem {
+    margin: 2px 0;
+    margin-left: 20px !important;
 }
 img.toplogo {
     height: 25px !important;
@@ -143,6 +156,31 @@ span.ml-2.menutext {
     .p-megamenu.p-megamenu-mobile .p-megamenu-button:hover {
     color: #feffff;
     background: #08090a;
+    }
+    .toptext {
+    line-height: 33px;
+    }
+    .converter-card {
+    height: 610px;
+    border-radius: 5px !important;
+    box-shadow: 0 5px 10px 0 rgba(41,61,102,.2) !important;
+    }
+    i.info.pi.pi-info-circle {
+    margin-right: 4px;
+    display: none;
+    }
+    small.note {
+    background-color: #dfe9ff;
+    padding: 8px;
+    font-size: 4px;
+    border-radius: 5px;
+    /* margin-bottom: 40px !important; */
+    }
+    .top-options.col-6 {
+    width: 75% !important;
+    }
+    .selectbtn {
+    width: 100% !important;
     }
 }
 .p-megamenu.p-megamenu-horizontal .p-megamenu-root-list > .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover {
