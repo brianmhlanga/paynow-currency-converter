@@ -173,13 +173,6 @@ span.ml-2.menutext {
     margin: 2px 0 !important;
     margin-left: 0 !important;
     }
-    small.note {
-    background-color: #dfe9ff !important;
-    padding: 8px !important;
-    font-size: 4px !important;
-    border-radius: 5px !important;
-    /* margin-bottom: 40px !important; */
-    }
     .top-options.col-6 {
     width: 75% !important;
     }
