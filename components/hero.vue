@@ -22,7 +22,12 @@
                       <div class="grid formgrid p-fluid">
                             <div class="field mb-4 col-12 md:col-4">
                                 <label for="item" class="font-medium text-900">Amount</label>
-                                <InputText v-model="amount" type="number" />
+                                <IconField iconPosition="left">
+                                    <InputIcon>
+                                        <span class="">{{ selectedFrom?.sign }}</span>
+                                    </InputIcon>
+                                    <InputText v-model="amount" type="number" />
+                                </IconField>
                             </div>
                             <div class="field mb-4 col-12 md:col-4">
                             <label for="price" class="font-medium text-900">From</label>
@@ -91,7 +96,7 @@ const amount = ref()
 const loading = ref(false)
 const first_symbol = ref<string>()
 const second_symbol = ref<string>()
-const selectedFrom = ref({"name":"ZiG/ZiG","symbol":"ZiG","label":"ZiG - Zimbabwean Gold","flag":"ZW","rate":{"bid":1,"ask":1,"avg":1}})
+const selectedFrom = ref({"name":"ZiG/ZiG","symbol":"ZiG","sign":"ZiG","label":"ZiG - Zimbabwean Gold","flag":"ZW","rate":{"bid":1,"ask":1,"avg":1}})
 const selectedTo = ref()
 const total = ref()
 const rowClass = (data:any) => {
@@ -101,6 +106,7 @@ const rates = ref([
    {
         "name": "ZiG/ZiG",
         "symbol": "ZiG",
+        "sign": "ZiG",
         "label": "ZiG - Zimbabwean Gold",
         "flag": "ZW",
         "rate": {
@@ -112,6 +118,7 @@ const rates = ref([
     {
         "name": "USD/ZiG",
         "symbol": "USD",
+        "sign": "$",
         "label": "USD - US Dollar",
         "flag": "US",
         "rate": {
@@ -123,6 +130,7 @@ const rates = ref([
     {
         "name": "GBP/ZiG",
         "symbol": "GBP",
+        "sign": "£",
         "label": "GBP - British Pound",
         "flag": "GB",
         "rate": {
@@ -134,6 +142,7 @@ const rates = ref([
     {
         "name": "EUR/ZiG",
         "symbol": "EUR",
+        "sign": "€",
         "label": "EUR - Euro",
         "flag": "EU",
         "rate": {
@@ -145,6 +154,7 @@ const rates = ref([
     {
         "name": "ZiG/ZAR",
         "symbol": "ZAR",
+        "sign": "R",
         "label": "ZAR - South African Rand",
         "flag": "ZA",
         "rate": {
@@ -156,6 +166,7 @@ const rates = ref([
     {
         "name": "BWP/ZiG",
         "symbol": "BWP",
+        "sign": "P",
         "label": "BWP - Botswana Pula",
         "flag": "BW",
         "rate": {
