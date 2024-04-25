@@ -154,26 +154,30 @@ span.ml-2.menutext {
         font-size: 16px !important;
     }
     .p-megamenu.p-megamenu-mobile .p-megamenu-button:hover {
-    color: #feffff;
-    background: #08090a;
+    color: #feffff !important;
+    background: #08090a !important;
     }
     .toptext {
-    line-height: 33px;
+    line-height: 33px !important;
     }
     .converter-card {
-    height: 610px;
+    height: 610px !important;
     border-radius: 5px !important;
     box-shadow: 0 5px 10px 0 rgba(41,61,102,.2) !important;
     }
     i.info.pi.pi-info-circle {
-    margin-right: 4px;
-    display: none;
+    margin-right: 4px !important;
+    display: none !important;
+    }
+    .p-menubar .p-menuitem {
+    margin: 2px 0 !important;
+    margin-left: 0 !important;
     }
     small.note {
-    background-color: #dfe9ff;
-    padding: 8px;
-    font-size: 4px;
-    border-radius: 5px;
+    background-color: #dfe9ff !important;
+    padding: 8px !important;
+    font-size: 4px !important;
+    border-radius: 5px !important;
     /* margin-bottom: 40px !important; */
     }
     .top-options.col-6 {
@@ -186,6 +190,6 @@ span.ml-2.menutext {
 .p-megamenu.p-megamenu-horizontal .p-megamenu-root-list > .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover {
     color: #575757 !important;
     background: #f2f3f7 !important;
-    border: none;
+    border: none !important;
 }
 </style>
