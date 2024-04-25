@@ -249,7 +249,7 @@ tr.p-row-even.top-blue {
     line-height: 33px !important;
     }
     .converter-card {
-    height: 610px !important;
+    height: 675px !important;
     border-radius: 5px !important;
     box-shadow: 0 5px 10px 0 rgba(41,61,102,.2) !important;
     }
