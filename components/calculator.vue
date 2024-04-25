@@ -239,6 +239,10 @@ tr.p-row-even.top-blue {
     outline: none !important;
     outline-offset: 2px;
 }
+.p-menubar.p-menubar-mobile .p-menubar-button:hover {
+    background: #ffffff !important;
+    color: #334155;
+}
 @media (max-width: 768px) {
     span.ml-2.menutext {
         color: #3c3131 !important;
