@@ -49,6 +49,11 @@
                                         </div>
                                     </template>
                                 </Dropdown>
+                                <Button @click="switchCurrencies()" icon="pi pi-arrow-right-arrow-left" severity="success" class="ml-2 ex-button normal" rounded outlined aria-label="Bookmark"/>
+                            </div>
+                            </div>
+                            <div class="field mobile-only mb-4 col-12 md:col-4">
+                            <div class="flex align-content-center">
                                 <Button @click="switchCurrencies()" icon="pi pi-arrow-right-arrow-left" severity="success" class="ml-2 ex-button" rounded outlined aria-label="Bookmark"/>
                             </div>
                             </div>
@@ -220,6 +225,7 @@ span.tagline {
 p.total {
     font-size: 40px !important;
 }
+
 .p-button-custom {
     color: #ffffff;
     background: #2566fa !important;
@@ -326,6 +332,9 @@ button.p-button.p-component.p-button-icon-only.p-button-success.p-button-rounded
     transition: background-color 0.3s;
     align-self: start;
 }
+.mobile-only {
+    display: none;
+}
 .Hero-button:hover {
     background-color: #f2f3f7;
     border: 1px solid #231f20;
@@ -380,6 +389,12 @@ button.p-button.p-component.p-button-icon-only.p-button-success.p-button-rounded
   .hero {
     flex-direction: column;
   }
+  .mobile-only {
+    display: block !important;
+   }
+   button.p-button.p-component.p-button-icon-only.p-button-success.p-button-rounded.p-button-outlined.ml-2.ex-button.normal {
+    display: none !important;
+}
 
   .hero-left {
     margin-top: 5rem;
