@@ -234,6 +234,11 @@ tr.p-row-even.top-blue {
     color: white !important;
     /* border-radius: 0px !important; */
 }
+.p-menubar.p-menubar-mobile .p-menubar-button:focus {
+    box-shadow: none;
+    outline: none !important;
+    outline-offset: 2px;
+}
 @media (max-width: 768px) {
     span.ml-2.menutext {
         color: #3c3131 !important;
@@ -253,6 +258,7 @@ tr.p-row-even.top-blue {
     border-radius: 5px !important;
     box-shadow: 0 5px 10px 0 rgba(41,61,102,.2) !important;
     }
+    
     i.info.pi.pi-info-circle {
     margin-right: 4px !important;
     display: none !important;
