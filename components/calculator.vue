@@ -6,7 +6,9 @@
     </div>
         <div class="card-alignment">
         <div class="surface-card p-4 card-table border-round p-fluid col-12">
-            <small class="note"><i class="info pi pi-info-circle"></i>Please note that the table shows ZiG/USD, ZiG/GBP, ZiG/EUR, ZiG/ZAR, ZiG/BWP, and Inverses of listed pairs.</small>
+            <div class="row">
+                <small class="note"><i class="info pi pi-info-circle"></i>Please note that the table shows ZiG/USD, ZiG/GBP, ZiG/EUR, ZiG/ZAR, ZiG/BWP, and Inverses of listed pairs.</small>
+            </div>
         <div class="top-options col-6">
             <SelectButton v-model="select_value" :options="options" aria-labelledby="basic" class="selectbtn" />
         </div>
@@ -216,6 +218,8 @@ i.info.pi.pi-info-circle {
 small.note {
     background-color: #dfe9ff;
     padding: 8px;
+    display: block;
+    width: 100% !important;
     border-radius: 5px;
     /* margin-bottom: 40px !important; */
 }
@@ -229,5 +233,39 @@ tr.p-row-even.top-blue {
     background-color: #185ff9 !important;
     color: white !important;
     /* border-radius: 0px !important; */
+}
+@media (max-width: 768px) {
+    span.ml-2.menutext {
+        color: #3c3131 !important;
+        font-family: poppins, sans-serif !important;
+        font-weight: 500 !important;
+        font-size: 16px !important;
+    }
+    .p-megamenu.p-megamenu-mobile .p-megamenu-button:hover {
+    color: #feffff !important;
+    background: #08090a !important;
+    }
+    .toptext {
+    line-height: 33px !important;
+    }
+    .converter-card {
+    height: 610px !important;
+    border-radius: 5px !important;
+    box-shadow: 0 5px 10px 0 rgba(41,61,102,.2) !important;
+    }
+    i.info.pi.pi-info-circle {
+    margin-right: 4px !important;
+    display: none !important;
+    }
+    .p-menubar .p-menuitem {
+    margin: 2px 0 !important;
+    margin-left: 0 !important;
+    }
+    .top-options.col-6 {
+    width: 75% !important;
+    }
+    .selectbtn {
+    width: 100% !important;
+    }
 }
 </style>
